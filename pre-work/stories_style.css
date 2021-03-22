@@ -1,0 +1,170 @@
+body {
+    background-color: #733341;
+}
+
+div {
+    background-color: white;
+    width: 1366px;
+    height: 1500px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nameHeading {
+    font-size: 28px;
+    color: #cc9999;
+}
+
+a {
+    font-size: 18px; 
+}
+
+
+a:link {
+    color: #733341
+    text-decoration: none;
+}
+
+a:visited {
+    
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    
+    color:black;
+    font-style: italic;
+}
+
+
+.wrapperOne {
+    margin: 15px;
+    height: 1100px;
+}
+
+p {
+    margin: 8px;
+}
+
+#shoppingImg {
+    width: 300px;
+    height:300px; 
+    float:left; 
+    margin: 10px 3px;
+    padding-right: 50px;
+    
+}
+
+#shopQuote {
+    width:775px;
+    height: 300px;
+    float: left;
+    margin: 10px 5px;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+#shopText {
+    font-size: 16px;
+    line-height: normal;
+}
+
+#video {
+    margin: 10px;
+    width: 530px;
+    height: 470px; 
+    position: relative;
+    bottom: 715px;
+    left: 750px; 
+}
+
+#videoText {
+    position: relative;
+    bottom: 807px;
+    left: 750px; 
+    width: 520px;
+    height: auto;  
+    margin: 10px;
+    
+}
+
+
+#boxWrappers {
+    margin: 25px 10px 15px 0px;
+    width: 700px;
+    height:800px;
+}
+
+.allDivs {
+    background-color: rgba(172, 77, 98, 0.4);
+    width: 650px;
+    height:150px; 
+    float: left;
+    margin-top:10px;
+
+
+}
+
+#box1 {
+    background-color: black;
+}
+
+#box1:hover{
+    background-color: rgba(140, 55, 108, 0.5)
+}
+
+#box2 {
+    background-color: #949494;
+    
+}
+
+#box2:hover {
+    background-color: rgba(140, 55, 108, 0.5)
+}
+
+#box3 {
+        background-color:#733341;
+        position: relative;
+        
+}
+
+#box3:hover {
+    background-color: rgba(140, 55, 108, 0.5)
+}
+
+#box4 {
+    background-color:#cc9999; 
+    position:relative;
+    
+
+}
+
+#box4:hover {
+    background-color: rgba(140, 55, 108, 0.5)   
+}
+
+
+#box1, #box2, #box3, #box4 {
+    width: 10px;
+    height: 140px; 
+    margin:  10px;
+    float: left;
+    position: relative;
+    top: 5px;
+    
+}
+
+
+
+
