@@ -83,7 +83,7 @@ input[type=button]:hover {
 #image {
     width: 302px;
      height: 457px;
-     border-bottom: #cc9999 2px solid;
+     border-bottom:#cc9999 2px solid;
      border-right: #cc9999 2px solid;
      float: left;
      margin: 15px;
