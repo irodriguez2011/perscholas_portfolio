@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+    .container {
+	margin: 0 auto;
+	width: 600px;
+	background-color:;
+}
+
+#timerButton {
+	margin: inherit;
+    height: 40px;
+    width: 175px;
+    background-color:;
+}
+.blue {
+	background-color: #0781D4;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+    margin: inherit;
+    font-size:30pt;
+    box-shadow: 1px 5px 2px rgba(0,0,0,0.6);
+}
+
+.red {
+	background-color: red;
+}
+
+p {
+    display:inline-block;
+    margin: inherit;
+    position: relative;
+    top:70px;
+    left: 55px;
+}
+    
+    </style>
+</head>
+<body>
+
+    <div class="container"> 
+
+        <div id="timerButton">
+            <input id="txtTempo" type="text" value="10" size="4" maxlength="4"><button id="btnStart">Start</button>
+            <button id="btnStop"> Reset</button>
+        </div>
+        
+        <div id="clock" class="blue"><p>00:00</p></div>
+            
+        </div>
+    
+</body>
+        <script> 
+            // when the document is loaded, trigger the "documentLoaded" function
+window.addEventListener('DOMContentLoaded', documentLoaded, false);
+
+var startTime;
+var limite;
+var temporizador;
+
+function documentLoaded() {
+	"use strict";
+
+	// listen for mouse clicks on the button
+	document.getElementById("btnStart").addEventListener("click", botaoClicked, false);
+
+	console.log("Documento carregado");
+}
+
+// when we click on the button, we save the current time, and the time limit. We then
+// create a timer to execute the "updateTime" function once a second.
+function botaoClicked() {
+	"use strict";
+
+	startTime = new Date();
+
+	limite = parseInt(document.getElementById("txtTempo").value);
+
+	clearInterval(temporizador);
+	temporizador = setInterval(updateTime, 1000);
+}
+
+function updateTime() {
+	"use strict";
+
+	// read the current time
+	var currentTime = new Date();
+
+	// calculate how many seconds passed since the start of the timer
+	var elapsed = (currentTime.getTime() - startTime.getTime()) / 1000;
+
+	// convert seconds to minutes and seconds (below 60)
+	var minutes = Math.floor(elapsed / 60);
+	var seconds = Math.floor(elapsed % 60);
+
+	// pad with zeroes on the left to look better
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+	if (seconds < 10) {
+		seconds = "0" + seconds;
+	}
+
+	// show the elapsed time
+	document.getElementById("clock").innerHTML = minutes + ":" + seconds;
+
+	// check if we are above the time limit and set the color of the timer accordingly
+	if (minutes >= limite) {
+		document.getElementById("clock").className = "red";
+	} else {
+		document.getElementById("clock").className = "blue";
+	}
+
+}
+
+        </script>
+</html>

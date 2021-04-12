@@ -1,0 +1,26 @@
+.grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+     background-image:url('bgimage_grid.jpeg');
+     background-repeat: inherit;
+     width: 100vw;
+     height: 100vh;
+    font-size: 100px;
+
+    }
+
+
+    .grider{
+        border: 2px solid black;
+        border-radius: 50%;
+        opacity: ;
+        background-color: #87cefa;
+    }
+
+    .grider:hover{
+        opacity: 0;
+
+    }
+ 
+

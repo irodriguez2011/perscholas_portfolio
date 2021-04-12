@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="gridstyle.css" type="text/css" rel="stylesheet"/>
+    
+</head>
+<body>
+
+
+    <div class="grid">
+        <div class="grider" ></div>
+        <div class="grider" ></div>
+        <div class="grider" ></div>
+        <div class="grider" id="box4"></div>
+        <div class="grider" id="box5"></div>
+        <div class="grider" id="box6"></div>
+        <div class="grider" id="box7"></div>
+        <div class="grider" id="box8"></div>
+        <div class="grider" id="box9"></div>
+    </div>
+
+</body>
+<script> 
+// Our colors to iterate through for the grid
+let color= ['#45CD88','#4546CD','#CD458A','#CDCC45','#87cefa'];
+let i = 0;
+const getGrid = document.querySelector(".grid")
+getGrid.addEventListener("click", function() {
+    i = i < color.length ? ++i : 0;
+    console.log(i);
+    const allElements = document.querySelectorAll(".grider")
+    console.log(allElements, ' Logging the elements ');
+    for (let c = 0; c < allElements.length; c++) {
+        allElements[c].style.background = color[i]
+    }
+    //document.querySelector(".grider").style.background = 'black'
+}
+) 
+
+</script>
+</html>
