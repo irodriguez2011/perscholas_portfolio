@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Week 2 - Homework 2 Functions</h1> 
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <p id="para4"></p>
+
+    <script> 
+    
+    
+ let argCount;
+ function getArguments() {
+     for (let counter =0; counter <= arguments.length; counter++) {
+            argCount = counter;
+  
+      }
+      return 'the number of arguments passed is ' +argCount;
+}
+
+document.getElementById('para1').innerHTML = getArguments(5,8,17,2,5,7,10);
+
+
+let string = 'jag testar';
+function reverseString(str) {
+    let reversed = [];
+    let joined = ('')
+    for (let y = str.length -1; y > 0;y--) {
+        reversed.push(string.charAt(y));
+
+    };
+    for (y = 0; y < string.length - 1; y++) {
+        joined += reversed[y]
+    }
+   return 'The reversed string is ' +joined
+}
+
+document.getElementById('para2').innerHTML = reverseString(string);
+
+let words = ['milk','banana','canteloupe','pizza']
+function findLongestWord(arr) {
+    
+    let temp = 0;
+    let longestWord;
+
+    for (let x = 0; x < arr.length; x++) {
+
+        if (arr[x].length > temp) {
+                temp = arr[x].length;
+                longestWord = arr[x]
+        }
+    } 
+    return  longestWord + ' is the longest word and it has ' + temp + ' letters'
+}
+
+document.getElementById('para3').innerHTML = findLongestWord(words);
+
+
+let int = 10;
+let listOfWords = ['mango','hippopotamus','cat','dog','Pneumonoultramicroscopicsilicovolcanoconiosis','consolidate']
+
+    function filterLongWords(array,int) {
+    
+    let longestWords = [];
+    for (let i = 0; i<array.length; i++) {
+        if (array[i].length > int) {
+            longestWords.push(array[i])
+        }
+    }
+    return longestWords + ' are the longest words in the array.'
+
+}
+
+document.getElementById('para4').innerHTML = filterLongWords(listOfWords,int);
+
+    
+    
+    
+    </script>
+
+</body>
+</html>
