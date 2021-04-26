@@ -17,10 +17,11 @@
 }
 
 #timerButton {
+	display: flex;
+	justify-content: center;
 	margin: inherit;
     height: 40px;
     width: 175px;
-   
 }
 .blue {
 	background-color: #0781D4;
@@ -32,7 +33,28 @@
 	position: absolute;
 	top:40px;
 	left: 200px;
+	margin-top: 10px;
 }
+
+#timeInput {
+	font-size: 12pt;
+}
+
+#userSecInput {
+	border: none;
+	background-color: #0781D4;
+	font-size: 30pt;
+	position: absolute;
+	top: 75px;
+	left: 49px;
+	width: 110px;
+
+}
+
+#btnStart {
+	margin-left: 5px;
+}
+
 
 .red {
 	background-color: red;
@@ -54,10 +76,10 @@ p {
 
         <div id="timerButton">
             <input id="timeInput" type="text" value="10" size="4" maxlength="4"><button id="btnStart">Start</button>
-            <button id="resetTime"> Reset</button>
+           
         </div>
         
-        <div id="clock" class="blue"><p>00:00</p></div>
+        <div id="clock" class="blue"> <input id="userSecInput" type ="text" value= "00:00" size="4"> </div>
             
         </div>
     
@@ -117,6 +139,7 @@ function updateTime() {
 	// show the elapsed time
 	document.getElementById("clock").innerHTML = minutes + ":" + seconds;
 
+
 	// check if we are above the time limit and set the color of the timer accordingly
 	if (minutes >= limite) {
 		document.getElementById("clock").className = "red";
@@ -126,13 +149,18 @@ function updateTime() {
 
 }
 
+
+let inputVal = document.getElementById("userSecInput").value
+// this will take the seconds that user puts into input box
+
+/*
 let resetBtn = document.getElementById('resetTime')
 
 	 function resetTime() { 
-		document.getElementById('btnStart').removeEventListener()
+		document.getElementById('btnStart').removeEventListener
 	}
 
 resetBtn.addEventListener('click',resetTime())
-
+*/
         </script>
 </html>
