@@ -1,1 +1,1 @@
-# ps_portfolio_project
+# PerScholas Software Engineer Program
