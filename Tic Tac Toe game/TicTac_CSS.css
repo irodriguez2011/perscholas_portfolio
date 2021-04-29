@@ -1,0 +1,101 @@
+:root {
+    --purple: #3e0249;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color:white;
+    font-family: sans-serif;
+    background: black;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 54px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Original Surfer', cursive;
+}
+
+.container  {
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gameboard {
+    width: 450px;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 30pt;
+    font-family: 'Krona One', sans-serif;
+}   
+
+#statusAndReset {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    
+}
+#status {
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    align-self: center;
+    padding-bottom: 10px;
+   position: relative;
+   top: 5px;
+   font-family: 'Krona One', sans-serif;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: red;
+    color:white;
+    border-color: black;
+    font-size: 18px;
+    transition: 200ms transform;
+    display: block;
+}
+
+button:hover {
+    cursor:pointer;
+    transform: translate(-5px);
+}
+
+.box {
+    border: 2px solid white;
+}
+
+#winnermsg {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    height: 200px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display:none;
+
+}
