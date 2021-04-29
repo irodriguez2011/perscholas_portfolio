@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+html, body, #container {
+  width: 100%;
+  height: 100%;
+}
+
+#clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.input {
+  width: 16%;
+  height: 15%;
+  background-color: #0781D4;
+  border: none;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.blue {
+  background-color: #0781D4;
+}
+
+.red {
+  background-color: red;
+}
+    
+    </style>
+</head>
+<body>
+
+	<script>
+		function handleSubmit() {
+		  const minLimit = parseInt(document.getElementsByClassName("input")[0].value);
+		  const secLimit = parseInt(document.getElementsByClassName("input")[1].value);
+  
+		  if (minLimit || secLimit) {
+			document.getElementById("txtTempo").value = minLimit + secLimit / 60;
+		  }
+		}
+	  </script>
+	  <div id="container">
+		<div id="controlos">
+		  <input id="txtTempo" type="text" value="10" size="4" maxlength="4">
+		  <button id="btnStart" onclick="handleSubmit()">Start</button>
+		</div>
+  
+		<div id="clock" class="blue">
+		  <input type="text" class="input" id="minutes" value="00" /> : 
+		  <input type="text" class="input" id="seconds" value="00" />
+		</div>
+	  </div>
+	  
+	  <script>
+		let enterMin = document.getElementById("minutes")
+		enterMin.addEventListener("keyup", (e) => {
+		  e.preventDefault();
+		  if (e.key === "Enter") {
+			document.getElementById("seconds").focus();
+		  }
+		})
+  
+		let enterSec = document.getElementById("seconds")
+		enterSec.addEventListener("keyup", (e) => {
+		  const minLimit = parseInt(document.getElementsByClassName("input")[0].value);
+		  const secLimit = parseInt(document.getElementsByClassName("input")[1].value);
+  
+		  e.preventDefault();
+		  if (e.key === "Enter") {
+			if (!minLimit) {
+			  document.getElementById("txtTempo").value = secLimit / 60;
+			} else if (!secLimit) {
+			  document.getElementById("txtTempo").value = minLimit;
+			} else {
+			  document.getElementById("txtTempo").value = minLimit + secLimit / 60;
+			}
+		  }
+		})
+	  </script>
+	  <script src="timerjs.js"></script>
+</html>
