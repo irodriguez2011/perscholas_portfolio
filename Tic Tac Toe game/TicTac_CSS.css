@@ -57,7 +57,7 @@ h1{
 }
 #status {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
     align-self: center;
     padding-bottom: 10px;
@@ -92,10 +92,21 @@ button:hover {
     flex-wrap: wrap;
     align-items: center;
     position: absolute;
+    top: 100px;
+    border: 3px solid black;
+    font-size: 20pt;
+    text-shadow: 2px 2px 5px #FF0000;
     margin: 0 auto;
-    height: 200px;
-    width: 500px;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 500px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.692);
     display:none;
 
+}
+
+#msgWindownBtn {
+    margin-top: 15px;
+    background-color: red;
+    color:white;
+    border-color: black;
 }

@@ -60,16 +60,16 @@ const gameboard = function boxClick(box,index) {
 }
 
 boxes.forEach(gameboard)
-//array.forEach(callback(item [, index [, array]
-// this will check for the index of each box
+// this will execute gameboard function for each box
 
 function boxclicked(event) { 
     
     const boxTargeted = event.target
 
-    // switches between X's and O's
-    count++
-    boxTargeted.innerHTML = (currentPlayer);
+    
+    count++ // keeps track how many times board was clicked
+
+    boxTargeted.innerHTML = (currentPlayer); // switches between player X and O
     if(xIsNext) {
         
         currentPlayer = playerO
@@ -80,7 +80,9 @@ function boxclicked(event) {
     }
     playerTurn.innerHTML = `${currentPlayer} is next`
     xIsNext = !xIsNext
+    
     const wasWinner = checkWinner()
+    
     // checks for draw
     if(!wasWinner && count > 8){
         playerTurn.innerText = 'Draw'
@@ -125,14 +127,14 @@ function checkWinner() {
 
 
         if (checkWinnerX){
-            winnermsg.innerText = `${playerX} is the winner`
-            Xwins++
+            winnermsg.innerText = `${playerX} is the winner of this round`
+            Xwins++ //keeps track of how many times X won
             return true;
         } 
         
         if (checkWinnerO) {
-            winnermsg.innerText = `${playerO} is the winner`
-            Owins++
+            winnermsg.innerText = `${playerO} is the winner of this round`
+            Owins++ // keeps track of how many times O won
             return true;
 
         }
