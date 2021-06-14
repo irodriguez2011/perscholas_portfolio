@@ -58,10 +58,11 @@ public class Calculator {
             System.out.println(divideNums(num1, num2));
             break;
         case 5:
+        	 System.out.println("Please enter a valid number.");
         	exit();
         	break;
         default:
-            System.out.println("Please enter a valid number.");
+           
     }
 		
 		
